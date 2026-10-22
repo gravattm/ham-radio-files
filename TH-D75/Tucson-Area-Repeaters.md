@@ -83,6 +83,23 @@ NOAA Weather Radio. Receive only.
 | 039 | NOAA NOG | 162.500 | FM | WNG703 NOAA Weather Radio Nogales |
 | 040 | NOAA SAF | 162.475 | FM | KXI24 NOAA Weather Radio Safford |
 
+## FM broadcast
+
+Receive only. Commercial and public FM stations, in wide FM (WFM).
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 056 | KUAZ 89.1 | 89.100 | WFM | KUAZ-FM NPR / U of A public radio - WFM RX |
+| 057 | KXCI 91.3 | 91.300 | WFM | KXCI community radio - WFM RX |
+| 058 | KCMT 92.1 | 92.100 | WFM | KCMT Regional Mexican - WFM RX |
+| 059 | KRQ 93.7 | 93.700 | WFM | KRQQ 93.7 KRQ Top 40 - WFM RX |
+| 060 | MIX 94.9 | 94.900 | WFM | KMXZ 94.9 MIXfm soft rock - WFM RX |
+| 061 | KLPX 96.1 | 96.100 | WFM | KLPX classic rock - WFM RX |
+| 062 | KIIM 99.5 | 99.500 | WFM | KIIM country - WFM RX |
+| 063 | KFMA102.1 | 102.100 | WFM | KFMA active rock - WFM RX |
+| 064 | KZLZ105.3 | 105.300 | WFM | KZLZ Regional Mexican - WFM RX |
+| 065 | KHIT107.5 | 107.500 | WFM | KHYT K-Hit 107.5 classic hits - WFM RX |
+
 ## Aviation
 
 Receive only. Aircraft radio uses AM.
@@ -116,7 +133,8 @@ Receive only. The stock antenna is weak on HF, so expect faint signals.
 - **TUMAMOC (006)** uses an odd 1.02 MHz split.
 - **GRN VLY (014) and RIO RICO (015)** are probably out of range from Tucson. They're still in the scan list.
 - **LEMN ZZY (022)** uses DCS 023 instead of a CTCSS tone and is linked to 146.940.
+- **KHYT (065)**: sources disagree on whether K-Hit is still on 107.5. Remove the channel if it's silent.
 - **APRS (043)** is for packet data. Don't transmit voice on it.
 - **Aviation frequencies** came from airport listings that don't fully agree. Check them against a current FAA chart before relying on them. TUS ground control isn't included because the sources disagree on its frequency.
 
-56 channels total.
+66 channels total.
