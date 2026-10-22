@@ -62,6 +62,52 @@ Frequencies, tones and modes were checked against the Radio Society of Tucson re
 | 036 | 6M LEMN | 53.040 | 52.040 | −1 MHz | 141.3 Hz | FM | K6PYP 6m Mt Lemmon - RX ONLY on D75 |
 | 037 | 6M LFX | 53.720 | 52.720 | −1 MHz | 136.5 Hz | FM | KA7LFX 6m Mt Lemmon - RX ONLY on D75 |
 
+## Simplex and data
+
+Same frequency for receive and transmit.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 041 | 2M CALL | 146.520 | FM | 2m national simplex calling frequency |
+| 042 | 70 CALL | 446.000 | FM | 70cm national simplex calling frequency |
+| 043 | APRS | 144.390 | FM | North American APRS - data only, no voice |
+| 044 | ISS | 145.800 | FM | ISS voice/SSTV downlink - RX |
+
+## Weather
+
+NOAA Weather Radio. Receive only.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 038 | NOAA TUS | 162.400 | FM | WXL30 NOAA Weather Radio Tucson (Mt Lemmon) |
+| 039 | NOAA NOG | 162.500 | FM | WNG703 NOAA Weather Radio Nogales |
+| 040 | NOAA SAF | 162.475 | FM | KXI24 NOAA Weather Radio Safford |
+
+## Aviation
+
+Receive only. Aircraft radio uses AM.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 045 | TUS TWR | 118.300 | AM | Tucson Intl tower (primary) - AM RX |
+| 046 | TUS TWR2 | 119.000 | AM | Tucson Intl tower (secondary) - AM RX |
+| 047 | TUS ATIS | 123.800 | AM | Tucson Intl ATIS - AM RX |
+| 048 | TUS APP1 | 119.400 | AM | Tucson approach - AM RX |
+| 049 | TUS APP2 | 125.100 | AM | Tucson approach - AM RX |
+| 050 | TUS APP3 | 128.500 | AM | Tucson approach - AM RX |
+| 051 | TUS CLR | 126.650 | AM | Tucson Intl clearance delivery - AM RX |
+| 052 | GUARD | 121.500 | AM | Aviation emergency (guard) - AM RX |
+
+## HF time signals
+
+Receive only. The stock antenna is weak on HF, so expect faint signals.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 053 | WWV 5 | 5.000 | AM | WWV time signal 5 MHz - AM RX |
+| 054 | WWV 10 | 10.000 | AM | WWV time signal 10 MHz - AM RX |
+| 055 | WWV 15 | 15.000 | AM | WWV time signal 15 MHz - AM RX |
+
 ## Notes
 
 - **6 m channels (035–037) are receive-only.** The TH-D75 can listen on 6 m but can't transmit there.
@@ -70,5 +116,7 @@ Frequencies, tones and modes were checked against the Radio Society of Tucson re
 - **TUMAMOC (006)** uses an odd 1.02 MHz split.
 - **GRN VLY (014) and RIO RICO (015)** are probably out of range from Tucson. They're still in the scan list.
 - **LEMN ZZY (022)** uses DCS 023 instead of a CTCSS tone and is linked to 146.940.
+- **APRS (043)** is for packet data. Don't transmit voice on it.
+- **Aviation frequencies** came from airport listings that don't fully agree. Check them against a current FAA chart before relying on them. TUS ground control isn't included because the sources disagree on its frequency.
 
-38 channels total.
+56 channels total.

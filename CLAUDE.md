@@ -8,8 +8,8 @@ A data repository of amateur radio programming files, not a software project —
 
 ## TH-D75 files
 
-- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 38 channels covering 2m, 220, 440 and 6m. Tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (k7rst.org, Repeaters page) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
-- `Tucson-Area-Repeaters.md` — a readable table of every channel, grouped by band, with notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
+- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 56 channels: 38 repeaters on 2m, 220, 440 and 6m (000–037), then simplex/APRS/ISS, NOAA weather, Tucson aviation (AM) and WWV (AM) (038–055). The repeaters' tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (Repeaters page on the RST website) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
+- `Tucson-Area-Repeaters.md` — a readable table of every channel, with repeaters grouped by band and the other channels by type, plus notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
 
 ## Channel conventions
@@ -31,8 +31,8 @@ This layout was worked out from the `.THD75` files, checked against the repeater
 | `0x01` | u32 | RX frequency, Hz |
 | `0x05` | u32 | TX frequency, Hz |
 | `0x09` | u32 | Offset, Hz |
-| `0x0D` | u8 | Shift: `1` = Minus, `2` = Plus |
-| `0x0E` | u8 | Operating mode: `0x00` = FM, `0x1B` = DV (D-STAR) |
+| `0x0D` | u8 | Shift: `0` = simplex, `1` = Minus, `2` = Plus |
+| `0x0E` | u8 | Operating mode: `0x00` = FM, `0x01` = AM, `0x1B` = DV (D-STAR) |
 | `0x0F` | 30 B | Name, UTF-16LE, NUL-padded (names of up to 9 characters appear in the file) |
 | `0x2D` | u8 | Tone mode: `0` = None, `1` = Tone, `3` = DCS (`2` is probably CTCSS, unconfirmed) |
 | `0x2E` | u8 | TX CTCSS tone index |
