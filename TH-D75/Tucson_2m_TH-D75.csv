@@ -1,0 +1,17 @@
+Receive Frequency,Transmit Frequency,Offset Frequency,Offset Direction,Operating Mode,Name,Tone Mode,CTCSS,Rx CTCSS,DCS,DCS Polarity,Lockout,Step,Fine Step Enable,Fine Step,Digital Squelch,Digital Code,Your Callsign,Rpt-1 Callsign,Rpt-2 Callsign,Group,Comment
+147.34000,147.94000,600 kHz,Plus,FM,CATALINA,Tone,179.9,179.9,023,Both N,,5 kHz,,,Off,,,,,,W7SA Catalina RC near TUS airport
+146.88000,146.28000,600 kHz,Minus,FM,LEMN OEM,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,N7OEM Pima Co OEM Mt Lemmon
+147.16000,147.76000,600 kHz,Plus,FM,LEMN EAR,Tone,141.3,141.3,023,Both N,,5 kHz,,,Off,,,,,,K7EAR EAARS linked Mt Lemmon
+147.41000,146.41000,1.00 MHz,Minus,DV,LEMN DST,None,88.5,88.5,023,Both N,,5 kHz,,,Off,,CQCQCQ,K7TUS  B,K7TUS  G,,K7TUS D-STAR Mt Lemmon (was K7RST)
+146.62000,146.02000,600 kHz,Minus,FM,KEYSTONE,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,W7AI Oro Valley ARC Keystone Pk
+147.30000,147.90000,600 kHz,Plus,FM,PECOC,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,N7OEM PECOC - list said 147.600 input; VERIFY
+147.28000,146.26000,1.02 MHz,Minus,FM,TUMAMOC,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,K7EAR EAARS linked Tumamoc Hill odd split
+146.94000,146.34000,600 kHz,Minus,FM,WD7F NE,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,WD7F and BART NE Tucson
+146.96000,146.36000,600 kHz,Minus,FM,UA ARC,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,K7UAZ U of A ARC
+147.00000,147.60000,600 kHz,Plus,FM,N7HND,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,N7HND 5151 E Broadway
+145.33000,144.73000,600 kHz,Minus,FM,PARKPLC,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,KA7LVX near Park Place Mall
+145.37000,144.77000,600 kHz,Minus,FM,K6PYP,Tone,131.8,131.8,023,Both N,,5 kHz,,,Off,,,,,,K6PYP high location
+145.45000,144.85000,600 kHz,Minus,FM,IBM RITA,None,88.5,88.5,023,Both N,,5 kHz,,,Off,,,,,,W7IBM Rita Ranch - no tone
+145.29000,144.69000,600 kHz,Minus,FM,ELEPHANT,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,WE7GV Elephant Head
+145.27000,144.67000,600 kHz,Minus,FM,GRN VLY,Tone,107.2,107.2,023,Both N,On,5 kHz,,,Off,,,,,,WE7GV Green Valley - likely out of range
+147.06000,147.66000,600 kHz,Plus,FM,RIO RICO,Tone,127.3,127.3,023,Both N,On,5 kHz,,,Off,,,,,,KG7DNO Rio Rico - likely out of range
