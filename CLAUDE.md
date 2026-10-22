@@ -10,6 +10,7 @@ A data repository of amateur radio programming files, not a software project —
 
 - `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 66 channels: 38 repeaters on 2m, 220, 440 and 6m (000–037), then simplex/APRS/ISS, NOAA weather, Tucson aviation (AM) and WWV (AM) (038–055), and Tucson FM broadcast stations in WFM (056–065). The repeaters' tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (Repeaters page on the RST website) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
 - `Tucson-Area-Repeaters.md` — a readable table of every channel, with repeaters grouped by band and the other channels by type, plus notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
+- `Future-Requirements.md` — planned channels (FRS/GMRS etc.), open questions, and fields still to decode. Check it before adding channels, and remove items once they're done.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
 
 ## Channel conventions
