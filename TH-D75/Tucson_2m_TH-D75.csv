@@ -4,7 +4,7 @@ Receive Frequency,Transmit Frequency,Offset Frequency,Offset Direction,Operating
 147.16000,147.76000,600 kHz,Plus,FM,LEMN EAR,Tone,141.3,141.3,023,Both N,,5 kHz,,,Off,,,,,,K7EAR EAARS linked Mt Lemmon
 147.41000,146.41000,1.00 MHz,Minus,DV,LEMN DST,None,88.5,88.5,023,Both N,,5 kHz,,,Off,,CQCQCQ,K7TUS  B,K7TUS  G,,K7TUS D-STAR Mt Lemmon (was K7RST)
 146.62000,146.02000,600 kHz,Minus,FM,KEYSTONE,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,W7AI Oro Valley ARC Keystone Pk
-147.30000,147.90000,600 kHz,Plus,FM,PECOC,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,N7OEM PECOC - list said 147.600 input; VERIFY
+147.30000,147.60000,300 kHz,Plus,FM,PECOC,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,"N7OEM PECOC - odd split, 147.600 input per RST chart"
 147.28000,146.26000,1.02 MHz,Minus,FM,TUMAMOC,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,K7EAR EAARS linked Tumamoc Hill odd split
 146.94000,146.34000,600 kHz,Minus,FM,WD7F NE,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,WD7F and BART NE Tucson
 146.96000,146.36000,600 kHz,Minus,FM,UA ARC,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,K7UAZ U of A ARC
@@ -13,5 +13,27 @@ Receive Frequency,Transmit Frequency,Offset Frequency,Offset Direction,Operating
 145.37000,144.77000,600 kHz,Minus,FM,K6PYP,Tone,131.8,131.8,023,Both N,,5 kHz,,,Off,,,,,,K6PYP high location
 145.45000,144.85000,600 kHz,Minus,FM,IBM RITA,None,88.5,88.5,023,Both N,,5 kHz,,,Off,,,,,,W7IBM Rita Ranch - no tone
 145.29000,144.69000,600 kHz,Minus,FM,ELEPHANT,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,WE7GV Elephant Head
-145.27000,144.67000,600 kHz,Minus,FM,GRN VLY,Tone,107.2,107.2,023,Both N,On,5 kHz,,,Off,,,,,,WE7GV Green Valley - likely out of range
-147.06000,147.66000,600 kHz,Plus,FM,RIO RICO,Tone,127.3,127.3,023,Both N,On,5 kHz,,,Off,,,,,,KG7DNO Rio Rico - likely out of range
+145.27000,144.67000,600 kHz,Minus,FM,GRN VLY,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,WE7GV Green Valley - likely out of range
+147.06000,147.66000,600 kHz,Plus,FM,RIO RICO,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,KG7DNO Rio Rico - likely out of range
+146.70000,146.10000,600 kHz,Minus,FM,SNP EAST,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,Mt Lemmon RC - Saguaro NP East
+441.10000,446.10000,5.00 MHz,Plus,FM,K7TUS 441,Tone,100.0,100.0,023,Both N,,5 kHz,,,Off,,,,,,Mt Lemmon RC Tucson metro - linked 448.25
+448.25000,443.25000,5.00 MHz,Minus,FM,LEMN 448,Tone,100.0,100.0,023,Both N,,5 kHz,,,Off,,,,,,Mt Lemmon RC Mt Lemmon - linked 441.1
+441.52500,446.52500,5.00 MHz,Plus,FM,W9FCM,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,W9FCM Tucson metro
+442.32500,447.32500,5.00 MHz,Plus,FM,K7HWG,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,K7HWG Tucson metro
+444.10000,449.10000,5.00 MHz,Plus,FM,OV PD,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,W7AI OVARC Oro Valley Police Stn
+444.92500,449.92500,5.00 MHz,Plus,FM,LEMN ZZY,DCS,88.5,88.5,023,Both N,,5 kHz,,,Off,,,,,,KB7ZZY Mt Lemmon DCS 023 - linked 146.94
+444.97500,449.97500,5.00 MHz,Plus,FM,KC0LL,Tone,100.0,100.0,023,Both N,,5 kHz,,,Off,,,,,,KC0LL Mt Lemmon
+445.30000,440.30000,5.00 MHz,Minus,FM,SNP 445,Tone,131.8,131.8,023,Both N,,5 kHz,,,Off,,,,,,K6PYP Saguaro NP East
+445.90000,440.90000,5.00 MHz,Minus,DV,LEMN DSU,None,88.5,88.5,023,Both N,,5 kHz,,,Off,,,,,,K7TUS D-STAR UHF Mt Lemmon
+446.85000,441.85000,5.00 MHz,Minus,FM,N6DBF,Tone,127.3,127.3,023,Both N,,5 kHz,,,Off,,,,,,N6DBF Tucson metro
+447.50000,442.50000,5.00 MHz,Minus,FM,N7XJQ,Tone,136.5,136.5,023,Both N,,5 kHz,,,Off,,,,,,N7XJQ Tucson metro
+447.52500,442.52500,5.00 MHz,Minus,FM,MARANA,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,W7AI OVARC Marana
+448.55000,443.55000,5.00 MHz,Minus,FM,LEMN OEMU,Tone,110.9,110.9,023,Both N,,5 kHz,,,Off,,,,,,N7OEM Pima Co OEM Mt Lemmon UHF
+448.77500,443.77500,5.00 MHz,Minus,FM,CATALINAU,Tone,179.9,179.9,023,Both N,,5 kHz,,,Off,,,,,,W7SA Catalina RC TUS airport UHF
+449.30000,444.30000,5.00 MHz,Minus,FM,RACQUET,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,N7HND Tucson Racquet Club
+449.55000,444.55000,5.00 MHz,Minus,FM,VAIL,Tone,107.2,107.2,023,Both N,,5 kHz,,,Off,,,,,,K7LHR Vail
+224.06000,222.46000,1.60 MHz,Minus,FM,LEMN 224,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,KA7LFX Mt Lemmon 220
+224.50000,222.90000,1.60 MHz,Minus,FM,PYP 224,Tone,156.7,156.7,023,Both N,,5 kHz,,,Off,,,,,,K6PYP Mt Lemmon 220
+51.86000,51.36000,500 kHz,Minus,FM,6M SNP,Tone,100.0,100.0,023,Both N,,5 kHz,,,Off,,,,,,K6PYP 6m SNP East - RX ONLY on D75
+53.04000,52.04000,1.00 MHz,Minus,FM,6M LEMN,Tone,141.3,141.3,023,Both N,,5 kHz,,,Off,,,,,,K6PYP 6m Mt Lemmon - RX ONLY on D75
+53.72000,52.72000,1.00 MHz,Minus,FM,6M LFX,Tone,136.5,136.5,023,Both N,,5 kHz,,,Off,,,,,,KA7LFX 6m Mt Lemmon - RX ONLY on D75
