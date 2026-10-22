@@ -8,10 +8,8 @@ A data repository of amateur radio programming files, not a software project —
 
 ## TH-D75 files
 
-- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It has no version number on purpose: edit this file and let git keep the history. Currently identical to `v3`.
-- `Tucson-Area_TH-D75_v3.THD75` — the working copy the official file was made from. It's a binary memory image for Kenwood's TH-D75 programming software, with 38 channels covering 2m, 220, 440 and 6m. Tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (k7rst.org, Repeaters page) on 2026-10-21. It is binary, so editing it as text corrupts it; see the record layout below.
-- `Tucson-Area_TH-D75_v2.THD75` — the old version, kept for reference. It has every channel set to Tone Mode `None` and FM, so it shouldn't be loaded.
-- `Tucson_2m_TH-D75.csv` — a CSV export of `v3`, one row per channel in the same order, in the software's import format. Despite the "2m" in its name, it covers all bands. When `v3` changes, regenerate the CSV from it so the two stay in sync.
+- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 38 channels covering 2m, 220, 440 and 6m. Tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (k7rst.org, Repeaters page) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
+- `Tucson_2m_TH-D75.csv` — a CSV export of the `.THD75`, one row per channel in the same order, in the software's import format. Despite the "2m" in its name, it covers all bands. When the `.THD75` changes, regenerate the CSV from it so the two stay in sync.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
 
 ## CSV conventions
@@ -57,4 +55,4 @@ This layout was worked out from the `.THD75` files, checked against the CSV, and
 
 ## Housekeeping
 
-`.DS_Store` files are tracked in git (macOS clutter). Don't add any more of them.
+`.DS_Store` files are ignored via `.gitignore`.
