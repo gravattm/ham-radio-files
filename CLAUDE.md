@@ -9,24 +9,18 @@ A data repository of amateur radio programming files, not a software project —
 ## TH-D75 files
 
 - `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 38 channels covering 2m, 220, 440 and 6m. Tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (k7rst.org, Repeaters page) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
-- `Tucson_2m_TH-D75.csv` — a CSV export of the `.THD75`, one row per channel in the same order, in the software's import format. Despite the "2m" in its name, it covers all bands. When the `.THD75` changes, regenerate the CSV from it so the two stay in sync.
+- `Tucson-Area-Repeaters.md` — a readable table of every channel, grouped by band, with notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
 
-## CSV conventions
+## Channel conventions
 
-The header row matches the column layout the TH-D75 programming software expects for import, so don't rename, reorder, or drop columns. Follow the patterns the existing rows use:
-
-- Frequencies in MHz with 5 decimal places (`147.34000`). `Transmit Frequency` must equal receive ± the offset. Offset is written as `600 kHz` / `1.00 MHz`, and the direction as `Plus` / `Minus`.
-- `Name` is uppercase and at most 9 characters (the longest in the current file). The software shows longer names truncated.
-- `Operating Mode` is `FM` for analog or `DV` for D-STAR. D-STAR rows fill in `Your Callsign` (`CQCQCQ`) and the `Rpt-1`/`Rpt-2` callsigns, padded to 8 characters with the module letter in the last position (`K7TUS  B`, `K7TUS  G`).
-- Rows with no tone still carry the default fields `88.5`, `023`, `Both N`; `Tone Mode` is what decides whether a tone is used.
-- `Lockout` is blank (scan) on every channel. The comment "likely out of range" marks candidates for lockout, which is set in the Kenwood software.
-- `Comment` starts with the repeater's callsign, followed by its location or notes. A comment containing `VERIFY` marks data that hasn't been confirmed — keep that flag unless the value has actually been verified.
-- `Tone Mode` is `Tone`, `None` or `DCS`. D-STAR rows only include the callsigns stored in the `.THD75`; 025 (LEMN DSU) has none.
+- Names are uppercase and at most 9 characters (the longest in the current file). The software shows longer names truncated.
+- Comments start with the repeater's callsign, followed by its location or notes.
+- No channel is locked out. "likely out of range" in a comment marks a candidate for lockout, which is set in the Kenwood software.
 
 ## `.THD75` record layout
 
-This layout was worked out from the `.THD75` files, checked against the CSV, and confirmed by opening edited files in the Kenwood software. Kenwood doesn't document it. All integers are little-endian. Edit the file only by overwriting bytes in place (e.g. a Python script using `struct`); never insert or remove bytes. Keep a backup, and after an edit, re-read every used channel to check nothing else moved.
+This layout was worked out from the `.THD75` files, checked against the repeater chart, and confirmed by opening edited files in the Kenwood software. Kenwood doesn't document it. All integers are little-endian. Edit the file only by overwriting bytes in place (e.g. a Python script using `struct`); never insert or remove bytes. Keep a backup, and after an edit, re-read every used channel to check nothing else moved.
 
 - **Header:** starts with ASCII `^Kenwood TH-D75`. The u32 at `0x30` is the channel table offset (`0x5E`), and the u32 at `0x34` is the channel count (1000).
 - **Channel table:** channel N (0-based) is at `0x5E + N * 0x127`. Each record is 295 bytes, and empty slots are all zero.
