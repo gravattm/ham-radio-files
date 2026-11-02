@@ -28,16 +28,29 @@ Receivers worth considering as an upgrade over, or companion to, the Eton Elite 
 | Malahit DSP2 (standalone SDR) | $300–450 | Tunes 10 kHz–2 GHz with SSB, airband, NOAA, military UHF and 2 m / 70 cm, plus a live waterfall display. Covers the Eton's and the D75's receive range in one box. Buy from a reputable seller; clones are common |
 | Icom IC-R30 | $650–700 | Polished wideband handheld, 100 kHz–3.3 GHz, SSB, two receivers at once, some digital voice modes, and computer programming |
 
-## Digital public safety
+## Digital public safety (P25 trunked)
 
-| Radio | Rough price | Why |
+Tucson and Pima County police, fire and EMS use PCWIN (Pima County Wireless Integrated Network), which RadioReference lists as a **P25 Phase II** system on 800 MHz. It's also a **simulcast** system, where several towers transmit the same signal at once, and cheaper digital scanners often decode that poorly. Neither the TH-D75 nor the Eton can receive it.
+
+| Option | Rough price | Why |
 |---|---|---|
-| Uniden SDS100 (handheld) / SDS200 (base) | $500–700 | Decodes P25 trunked radio, which Tucson and Pima County public safety use and the D75 can't receive. Many police talkgroups are encrypted, so check RadioReference for which Tucson talkgroups are in the clear before buying |
+| Uniden SDS200 (base / mobile) | ~$700 | Best fit for PCWIN: decodes Phase II and handles simulcast better than older scanners; the stronger of the two SDS models |
+| Uniden SDS100 (handheld) | ~$500–600 | The handheld version of the SDS200, with the same Phase II decoding and better simulcast handling than older scanners |
+| Whistler TRX-1 / TRX-2 | ~$400–550 | Decodes Phase II; simulcast performance less certain |
+| RTL-SDR USB receiver + SDRTrunk (free software) on the Mac | ~$40 | Decodes Phase II and copes with simulcast reasonably well. Tied to a computer, but a cheap way to see what's in the clear before buying a scanner |
+| Broadcastify (website / app) | Free | Online streams of many Tucson and Pima County feeds; no radio needed |
+
+Notes:
+- **Skip the older Uniden BCD436HP / BCD536HP for PCWIN.** They decode Phase II, but users report trouble with simulcast systems like it.
+- **Encryption:** no scanner can decode encrypted talkgroups. Marana Police is confirmed as always encrypted. Whether Tucson Police dispatch is encrypted is unclear: forum posts from different years disagree, and some say almost everything except Marana PD is in the clear. Fire and EMS are less often encrypted. Check RadioReference's PCWIN talkgroup list (it marks encrypted talkgroups) before buying.
+- **Programming:** Uniden's Sentinel software is believed to be Windows-only, so on a Mac use a Windows virtual machine or program from the scanner itself.
+- **Sources:** [RadioReference wiki – PCWIN](https://wiki.radioreference.com/index.php/Pima_County_Wireless_Integrated_Network_(PCWIN)), [RadioReference database – PCWIN](https://www.radioreference.com/db/sid/7735), [RadioReference forum – PCWIN Tucson](https://forums.radioreference.com/threads/pcwin-tucson.321191/).
 
 ## Recommendation
 
 - **One radio that beats the Eton and fills the D75's gaps:** Malahit DSP2.
 - **Mainly a better shortwave and SSB experience:** Sangean ATS-909X2.
+- **Tucson police, fire and EMS:** try an RTL-SDR with SDRTrunk first, then buy a Uniden SDS200 (or SDS100 for a handheld) if enough is in the clear.
 
 ## TH-D75 antennas
 
