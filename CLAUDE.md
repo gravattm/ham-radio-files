@@ -13,7 +13,7 @@ A data repository of amateur radio programming files, not a software project —
 - `Future-Requirements.md` — planned channels (FRS/GMRS etc.), open questions, and fields still to decode. Check it before adding channels, and remove items once they're done.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
 
-`Radio-Recommendations.md` at the top level compares receivers worth buying alongside or instead of these two radios. It's written from general knowledge, so check prices and availability before relying on it.
+`Radio-Recommendations.md` at the top level compares receivers worth buying alongside or instead of these two radios, and recommends antennas and bags for the TH-D75. It's written from general knowledge, so check prices and availability before relying on it.
 
 ## Eton Elite Executive files
 
