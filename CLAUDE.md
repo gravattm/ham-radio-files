@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A data repository of amateur radio programming files, not a software project — there is no build, lint, or test tooling. Files are organized by radio model (currently only `TH-D75/`, for the Kenwood TH-D75 handheld).
+A data repository of amateur radio programming files, not a software project — there is no build, lint, or test tooling. Files are organized by radio model: `TH-D75/` for the Kenwood TH-D75 handheld, and `Eton-Elite-Executive/` for the Eton Elite Executive shortwave receiver.
 
 ## TH-D75 files
 
@@ -12,6 +12,12 @@ A data repository of amateur radio programming files, not a software project —
 - `Tucson-Area-Repeaters.md` — a readable table of every channel, with repeaters grouped by band and the other channels by type, plus notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
 - `Future-Requirements.md` — planned channels (FRS/GMRS etc.), open questions, and fields still to decode. Check it before adding channels, and remove items once they're done.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
+
+`Radio-Recommendations.md` at the top level compares receivers worth buying alongside or instead of these two radios. It's written from general knowledge, so check prices and availability before relying on it.
+
+## Eton Elite Executive files
+
+- `Channel-List.md` — suggested memories, entered by hand (the radio has no computer programming interface). The aviation and FM broadcast entries are copied from the TH-D75 file, so update them when those channels change there.
 
 ## Channel conventions
 
