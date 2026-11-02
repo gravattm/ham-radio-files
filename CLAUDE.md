@@ -8,7 +8,7 @@ A data repository of amateur radio programming files, not a software project —
 
 ## TH-D75 files
 
-- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 66 channels: 38 repeaters on 2m, 220, 440 and 6m (000–037), then simplex/APRS/ISS, NOAA weather, Tucson aviation (AM) and WWV (AM) (038–055), and Tucson FM broadcast stations in WFM (056–065). The repeaters' tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (Repeaters page on the RST website) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
+- `Tucson-Area_TH-D75.THD75` — **the official file to load onto the radio.** It's a binary memory image for Kenwood's TH-D75 programming software, with 111 channels: 38 repeaters on 2m, 220, 440 and 6m (000–037), then simplex/APRS/ISS, NOAA weather, Tucson aviation (AM) and WWV (AM) (038–055), Tucson FM broadcast stations in WFM (056–065), and receive-only emergency and public-service channels: marine 16, FRS/GMRS 15–22, NLEC, SAR, Air Guard, military guard and CB 9 (066–079), and more aviation (AM): TUS ground and Davis-Monthan AFB tower, ground and ATIS (080–086), then MURS (087–091), more ham simplex and ISS APRS (092–095), NIFC fire tactical (096–098), air-to-air, Ryan Field, Marana and Albuquerque Center (099–107), and Union Pacific railroad (108–110). The repeaters' tones, modes and frequencies were checked against the Radio Society of Tucson repeater chart (Repeaters page on the RST website) on 2026-10-21. It has no version number on purpose: edit this file in place and let git keep the history. It is binary, so editing it as text corrupts it; see the record layout below.
 - `Tucson-Area-Repeaters.md` — a readable table of every channel, with repeaters grouped by band and the other channels by type, plus notes. It's generated from the `.THD75`, so whenever the `.THD75` changes, regenerate it to match: read each used channel's fields using the layout below.
 - `Future-Requirements.md` — planned channels (FRS/GMRS etc.), open questions, and fields still to decode. Check it before adding channels, and remove items once they're done.
 - `THD75_macos.zip` — the vendor's macOS installer (`THD75_macos.dmg`, ~96 MB). Leave it alone.
@@ -17,7 +17,7 @@ A data repository of amateur radio programming files, not a software project —
 
 - Names are uppercase and at most 9 characters (the longest in the current file). The software shows longer names truncated.
 - Comments start with the repeater's callsign, followed by its location or notes.
-- No channel is locked out. "likely out of range" in a comment marks a candidate for lockout, which is set in the Kenwood software.
+- Only the NOAA weather channels (038–040) are locked out (Skip), so they stay programmed but are skipped while scanning. "likely out of range" in a comment marks a candidate for lockout.
 
 ## `.THD75` record layout
 
@@ -38,6 +38,7 @@ This layout was worked out from the `.THD75` files, checked against the repeater
 | `0x2D` | u8 | Tone mode: `0` = None, `1` = Tone, `3` = DCS (`2` is probably CTCSS, unconfirmed) |
 | `0x2E` | u8 | TX CTCSS tone index |
 | `0x2F` | u8 | RX CTCSS tone index |
+| `0x34` | u8 | Scan lockout: `0` = Scan, `1` = Skip (PSkip is probably `2`, unconfirmed) |
 | `0x35` | u8 | Always `2` (unknown) |
 | `0x3E`, `0x42`–`0x45` | | Always `0xFF` (unknown) |
 | `0x85` | 162 B | Comment, UTF-16LE, NUL-padded to the end of the record |
@@ -45,8 +46,9 @@ This layout was worked out from the `.THD75` files, checked against the repeater
 - **CTCSS index:** a position in the standard 50-tone list (67.0 = 0, 69.3, 71.9, 74.4, 77.0, 79.7, 82.5, 85.4, 88.5, 91.5, 94.8, 97.4, 100.0, 103.5, 107.2, 110.9, 114.8, 118.8, 123.0, 127.3, 131.8, 136.5, 141.3, 146.2, 151.4, 156.7, 159.8, 162.2, 165.5, 167.9, 171.3, 173.8, 177.3, 179.9, …). Confirmed in the Kenwood software: 8 = 88.5, 12 = 100.0, 14 = 107.2, 15 = 110.9, 19 = 127.3, 20 = 131.8, 21 = 136.5, 22 = 141.3, 25 = 156.7, 29 = 167.9. So 179.9 is 33. Don't use Kenwood's older 42-tone list, which puts 179.9 at 29. Channels with no tone still store index 8 (the 88.5 default).
 - **No checksum:** on 2026-10-21, a copy with a channel's comment changed byte-for-byte opened in the Kenwood software and showed the change.
 - **D-STAR callsigns:** these live in a separate table. Each entry is `0x2E` bytes, and channel N's starts at `0x50B75 + N * 0x2E`. It holds URCALL (8 bytes ASCII, e.g. `CQCQCQ`), then a NUL, RPT1 at +9, a NUL, and RPT2 at +0x12. RPT1 and RPT2 are space-padded, for example `K7TUS  B`.
-- **Save timestamp:** the Kenwood software writes the save time at `0x509EC` (hour, 12-hour clock) and `0x509ED` (minute). These bytes change on every save, so ignore them when comparing files.
-- **Not located yet:** lockout and the DCS code. Setting DCS 023 changed no other byte, so 023 is probably the code table's zero/default value; a non-023 code is needed to find the field. To find one, set it on a single channel in the Kenwood software, save the file under a new name, and compare it with the previous file. Don't try to change these by editing bytes. Make those changes in the programming software, or decode the file further and update this section first.
+- **Save timestamp:** the Kenwood software writes the save time in the bytes `0x509EA`–`0x509ED` (`0x509EC` is the hour on a 12-hour clock and `0x509ED` the minute). These bytes change on every save, so ignore them when comparing files.
+- **Lockout:** confirmed on 2026-11-02 by setting Skip on 038–040 in the Kenwood software; only byte `0x34` of those records changed.
+- **Not located yet:** the DCS code. Setting DCS 023 changed no other byte, so 023 is probably the code table's zero/default value; a non-023 code is needed to find the field. To find one, set it on a single channel in the Kenwood software, save the file under a new name, and compare it with the previous file. Don't try to change it by editing bytes. Make that change in the programming software, or decode the file further and update this section first.
 
 ## Housekeeping
 

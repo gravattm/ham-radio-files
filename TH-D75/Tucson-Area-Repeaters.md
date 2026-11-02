@@ -72,10 +72,14 @@ Same frequency for receive and transmit.
 | 042 | 70 CALL | 446.000 | FM | 70cm national simplex calling frequency |
 | 043 | APRS | 144.390 | FM | North American APRS - data only, no voice |
 | 044 | ISS | 145.800 | FM | ISS voice/SSTV downlink - RX |
+| 092 | 2M 146.55 | 146.550 | FM | 2m simplex alternate |
+| 093 | 2M 146.58 | 146.580 | FM | 2m simplex alternate |
+| 094 | 220 CALL | 223.500 | FM | 1.25m national simplex calling frequency |
+| 095 | ISS APRS | 145.825 | FM | ISS APRS digipeater - data only, no voice |
 
 ## Weather
 
-NOAA Weather Radio. Receive only.
+NOAA Weather Radio. Receive only. Locked out (Skip): programmed, but skipped while scanning.
 
 | Ch | Name | Frequency (MHz) | Mode | Notes |
 |---:|---|---:|---|---|
@@ -114,6 +118,22 @@ Receive only. Aircraft radio uses AM.
 | 050 | TUS APP3 | 128.500 | AM | Tucson approach - AM RX |
 | 051 | TUS CLR | 126.650 | AM | Tucson Intl clearance delivery - AM RX |
 | 052 | GUARD | 121.500 | AM | Aviation emergency (guard) - AM RX |
+| 080 | TUS GND | 120.025 | AM | Tucson Intl ground control - AM RX |
+| 081 | TUS GND U | 348.600 | AM | Tucson Intl ground control (military UHF) - AM RX |
+| 082 | DM TWR | 118.850 | AM | Davis-Monthan AFB tower - AM RX |
+| 083 | DM TWR U | 253.500 | AM | Davis-Monthan AFB tower (military UHF) - AM RX |
+| 084 | DM GND | 121.800 | AM | Davis-Monthan AFB ground/clearance - AM RX |
+| 085 | DM GND U | 275.800 | AM | Davis-Monthan AFB ground/clearance (mil UHF) - AM RX |
+| 086 | DM ATIS | 270.100 | AM | Davis-Monthan AFB ATIS (military UHF) - verify - AM RX |
+| 099 | AIR2AIR | 122.750 | AM | Fixed-wing air-to-air - AM RX |
+| 100 | HELO A2A | 123.025 | AM | Helicopter air-to-air (medical/news/police) - AM RX |
+| 101 | RYN ATIS | 133.350 | AM | Ryan Field ATIS/AWOS - AM RX |
+| 102 | RYN TWR | 125.800 | AM | Ryan Field tower / CTAF (0600-2000) - AM RX |
+| 103 | RYN TWR2 | 120.350 | AM | Ryan Field tower (alternate) - AM RX |
+| 104 | RYN GND | 118.200 | AM | Ryan Field ground (0600-2000) - AM RX |
+| 105 | AVQ CTAF | 123.000 | AM | Marana Regional CTAF/UNICOM - AM RX |
+| 106 | AVQ AWOS | 118.375 | AM | Marana Regional AWOS-3 weather - AM RX |
+| 107 | ZAB TUS | 125.400 | AM | Albuquerque Center Tucson Low (sector 46) - verify - AM RX |
 
 ## HF time signals
 
@@ -125,6 +145,52 @@ Receive only. The stock antenna is weak on HF, so expect faint signals.
 | 054 | WWV 10 | 10.000 | AM | WWV time signal 10 MHz - AM RX |
 | 055 | WWV 15 | 15.000 | AM | WWV time signal 15 MHz - AM RX |
 
+## Emergency and public service
+
+Receive only. Everything here is outside the bands the TH-D75 can transmit on. Channels 066–079 use no tone (carrier squelch) so every signal is heard.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 066 | MARINE 16 | 156.800 | FM | USCG Marine VHF ch 16 distress/calling - RX |
+| 067 | GMRS 15 | 462.550 | FM | FRS/GMRS ch 15 - RX ONLY on D75 |
+| 068 | GMRS 16 | 462.575 | FM | FRS/GMRS ch 16 - RX ONLY on D75 |
+| 069 | GMRS 17 | 462.600 | FM | FRS/GMRS ch 17 - RX ONLY on D75 |
+| 070 | GMRS 18 | 462.625 | FM | FRS/GMRS ch 18 - RX ONLY on D75 |
+| 071 | GMRS 19 | 462.650 | FM | FRS/GMRS ch 19 - RX ONLY on D75 |
+| 072 | GMRS 20 | 462.675 | FM | FRS/GMRS ch 20 - informal emergency/travel ch - RX ONLY on D75 |
+| 073 | GMRS 21 | 462.700 | FM | FRS/GMRS ch 21 - RX ONLY on D75 |
+| 074 | GMRS 22 | 462.725 | FM | FRS/GMRS ch 22 - RX ONLY on D75 |
+| 075 | NLEC | 155.475 | FM | National Law Enforcement Channel (mutual aid) - RX |
+| 076 | SAR | 155.160 | FM | Common search and rescue frequency - RX |
+| 077 | AIR GUARD | 168.625 | FM | NIFC wildland fire Air Guard (federal) - RX |
+| 078 | MIL GUARD | 243.000 | AM | Military UHF aviation emergency (guard) - AM RX |
+| 079 | CB 9 | 27.065 | AM | CB ch 9 emergency/traveler assistance - AM RX |
+| 096 | NIFC TAC1 | 168.050 | FM | NIFC national wildland fire tactical 1 - RX |
+| 097 | NIFC TAC2 | 168.200 | FM | NIFC national wildland fire tactical 2 - RX |
+| 098 | NIFC TAC3 | 168.600 | FM | NIFC national wildland fire tactical 3 - RX |
+
+## MURS
+
+License-free business and personal radio. Receive only: the TH-D75 isn't certified to transmit on MURS.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 087 | MURS 1 | 151.820 | FM | MURS ch 1 - license-free business/personal - RX ONLY on D75 |
+| 088 | MURS 2 | 151.880 | FM | MURS ch 2 - RX ONLY on D75 |
+| 089 | MURS 3 | 151.940 | FM | MURS ch 3 - RX ONLY on D75 |
+| 090 | MURS 4 | 154.570 | FM | MURS ch 4 (Blue Dot) - RX ONLY on D75 |
+| 091 | MURS 5 | 154.600 | FM | MURS ch 5 (Green Dot) - RX ONLY on D75 |
+
+## Railroad
+
+Union Pacific road channels around Tucson, from RadioReference listings. Receive only.
+
+| Ch | Name | Frequency (MHz) | Mode | Notes |
+|---:|---|---:|---|---|
+| 108 | UP 08 | 160.230 | FM | Union Pacific AAR 08 Tucson to NM (Lordsburg Sub) - RX |
+| 109 | UP 14 | 160.320 | FM | Union Pacific AAR 14 Gila/Toltec to Tucson - RX |
+| 110 | UP 59 | 160.995 | FM | Union Pacific AAR 59 Tucson to Nogales - RX |
+
 ## Notes
 
 - **6 m channels (035–037) are receive-only.** The TH-D75 can listen on 6 m but can't transmit there.
@@ -135,6 +201,12 @@ Receive only. The stock antenna is weak on HF, so expect faint signals.
 - **LEMN ZZY (022)** uses DCS 023 instead of a CTCSS tone and is linked to 146.940.
 - **KHYT (065)**: sources disagree on whether K-Hit is still on 107.5. Remove the channel if it's silent.
 - **APRS (043)** is for packet data. Don't transmit voice on it.
-- **Aviation frequencies** came from airport listings that don't fully agree. Check them against a current FAA chart before relying on them. TUS ground control isn't included because the sources disagree on its frequency.
+- **FRS/GMRS:** only channels 15–22 are programmed. Channels 1–14 sit on 12.5 kHz offsets and wait on the fine-step field being decoded (see `Future-Requirements.md`). FRS and GMRS share 15–22, and channel 20 (462.675) is the informal emergency/travel channel.
+- **Public safety:** Tucson and Pima County police, fire and EMS run on digital trunked radio, which the TH-D75 can't receive. NLEC (075) and SAR (076) are nationwide analog mutual-aid frequencies and are usually quiet.
+- **Aviation frequencies** came from airport listings that don't fully agree. Check them against a current FAA chart before relying on them. TUS ground (080–081) follows SkyVector's FAA data effective 2026-10-01; older listings give 124.4.
+- **Davis-Monthan AFB (082–086)** shares Tucson approach (048–050). Its tower and ground are part-time. The ATIS frequency (270.1) comes from a single source, so verify it.
+- **Ryan Field (101–104)** has a part-time tower (0600–2000 local); outside those hours 125.8 is the CTAF. **Marana Regional (105–106)** has no tower.
+- **ZAB TUS (107)**, Albuquerque Center's Tucson Low sector, comes from an undated LiveATC listing. Verify it.
+- **Military UHF aviation (081, 083, 085, 086, and MIL GUARD 078)** is AM between 225 and 400 MHz. Use band B.
 
-66 channels total.
+111 channels total.
