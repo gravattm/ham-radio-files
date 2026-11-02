@@ -19,7 +19,6 @@ These sit on 12.5 kHz or 2.5 kHz offsets, which the 5 kHz step can't land on. Th
 
 ### Other services to consider (receive only)
 
-- **SO-50 satellite:** uplink 145.850 (67.0 Hz tone; 74.4 Hz arms it), downlink 436.795, which drifts ±10 kHz with Doppler. Needs a cross-band split memory, whose encoding isn't decoded yet; compare files after setting one in the Kenwood software.
 - **Coronado National Forest / Tucson Interagency Dispatch:** the only sources found were forum posts and a 2019 incident plan (e.g. 172.275, 171.6375, 168.150). Confirm against the current Southwest Area communications guide before adding.
 - **Arizona state interoperability:** frequencies not confirmed; check before adding.
 - **CB:** 26.965–27.405 MHz in AM on band B. The stock antenna performs poorly at these frequencies.

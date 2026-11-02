@@ -191,6 +191,19 @@ Union Pacific road channels around Tucson, from RadioReference listings. Receive
 | 109 | UP 14 | 160.320 | FM | Union Pacific AAR 14 Gila/Toltec to Tucson - RX |
 | 110 | UP 59 | 160.995 | FM | Union Pacific AAR 59 Tucson to Nogales - RX |
 
+## Satellite
+
+SO-50 (SaudiSat-1C), an FM ham satellite. Each channel listens on 70 cm and transmits on 2 m (split). The downlink drifts with Doppler, so start a pass on 805 and step down a channel as the signal drifts. The radio is half-duplex, so you can't hear yourself on the downlink.
+
+| Ch | Name | RX (MHz) | TX (MHz) | Tone | Mode | Notes |
+|---:|---|---:|---:|---|---|---|
+| 111 | SO50 805 | 436.805 | 145.850 | 67.0 Hz | FM | SO-50 sat start of pass (AOS) - TX 145.850 67.0 |
+| 112 | SO50 800 | 436.800 | 145.850 | 67.0 Hz | FM | SO-50 sat early pass - TX 145.850 67.0 |
+| 113 | SO50 795 | 436.795 | 145.850 | 67.0 Hz | FM | SO-50 sat mid pass - TX 145.850 67.0 |
+| 114 | SO50 790 | 436.790 | 145.850 | 67.0 Hz | FM | SO-50 sat late pass - TX 145.850 67.0 |
+| 115 | SO50 785 | 436.785 | 145.850 | 67.0 Hz | FM | SO-50 sat end of pass (LOS) - TX 145.850 67.0 |
+| 116 | SO50 ARM | 436.795 | 145.850 | 74.4 Hz | FM | SO-50 arm 10-min timer - 2 s key, TX 145.850 74.4 |
+
 ## Notes
 
 - **6 m channels (035–037) are receive-only.** The TH-D75 can listen on 6 m but can't transmit there.
@@ -207,6 +220,7 @@ Union Pacific road channels around Tucson, from RadioReference listings. Receive
 - **Davis-Monthan AFB (082–086)** shares Tucson approach (048–050). Its tower and ground are part-time. The ATIS frequency (270.1) comes from a single source, so verify it.
 - **Ryan Field (101–104)** has a part-time tower (0600–2000 local); outside those hours 125.8 is the CTAF. **Marana Regional (105–106)** has no tower.
 - **ZAB TUS (107)**, Albuquerque Center's Tucson Low sector, comes from an undated LiveATC listing. Verify it.
+- **SO-50 (111–116)** are on Scan for now but are candidates for Skip: the satellite is only overhead for about 10 minutes per pass, so in a scan these channels mostly pick up noise or other 70 cm signals.
 - **Military UHF aviation (081, 083, 085, 086, and MIL GUARD 078)** is AM between 225 and 400 MHz. Use band B.
 
-111 channels total.
+117 channels total.
